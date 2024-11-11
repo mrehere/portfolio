@@ -1,9 +1,10 @@
 import "./styles/partials/_global.scss";
+import "./App.scss";
 function App() {
   return (
-    <>
-      <h1>Hello from app</h1>
-    </>
+    <main className="viewBox">
+      <h1>hello from the view box</h1>
+    </main>
   );
 }
 
