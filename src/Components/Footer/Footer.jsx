@@ -1,11 +1,18 @@
 import "./Footer.scss";
 
 function Footer() {
+  const handleLinkedin = () => {
+    window.open("https://www.linkedin.com/in/majedur");
+  };
+
+  const handleGithub = () => {
+    window.open("https://github.com/mrehere");
+  };
   return (
     <footer className="footer">
       <div className="footer__findMe">find me in: </div>
       <div className="footer__socialContainer">
-        <div className="footer__linkContainer">
+        <div className="footer__linkContainer" onClick={handleLinkedin}>
           <div className="footer__link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +24,7 @@ function Footer() {
             </svg>
           </div>
         </div>
-        <div className="footer__linkContainer">
+        <div className="footer__linkContainer" onClick={handleGithub}>
           <div className="footer__link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
