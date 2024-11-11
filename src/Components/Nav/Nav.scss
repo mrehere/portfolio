@@ -1,0 +1,21 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.nav {
+  &__mobile-nav {
+    @include flex(unset, row, center, space-between);
+    border-bottom: 0.5px solid darken($neonPurple, 40%);
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__mobile-name {
+    color: lighten($neonPurple, 10%);
+  }
+}
