@@ -1,0 +1,29 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+.footer {
+  @include flex(100%, row, center, space-between);
+  border-top: 0.5px solid darken($neonPurple, 40%);
+
+  &__socialContainer {
+    @include flex(unset, row, center, space-between);
+  }
+  &__linkContainer {
+    @include flex(unset, row, center, center);
+    border-left: 0.5px solid darken($neonPurple, 40%);
+    padding: 0.5rem;
+    &:hover {
+      background-color: darken($electricBlue, 27%);
+
+      svg {
+        fill: lighten($neonPurple, 10%);
+      }
+    }
+  }
+  &__link svg {
+    fill: darken($neonPurple, 40%);
+
+    // &:hover {
+    //   fill: lighten($neonPurple, 10%);
+    // }
+  }
+}

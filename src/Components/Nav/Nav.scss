@@ -3,9 +3,9 @@
 
 .nav {
   &__mobile-nav {
-    @include flex(unset, row, center, space-between);
+    @include flex(100%, row, center, space-between);
     border-bottom: 0.5px solid darken($neonPurple, 40%);
-    width: 100%;
+
     padding: 0.5rem 1rem 0.5rem 1rem;
     @include tablet {
       display: none;
