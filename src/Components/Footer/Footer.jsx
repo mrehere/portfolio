@@ -51,6 +51,8 @@ function Footer() {
 
         {/* github */}
         <div className="footer__linkContainer" onClick={handleGithub}>
+          <p className="footer__user">@mrehere</p>
+
           <div className="footer__link">
             <svg
               xmlns="http://www.w3.org/2000/svg"

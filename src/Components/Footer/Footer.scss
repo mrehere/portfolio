@@ -43,6 +43,25 @@
     fill: darken($neonPurple, 40%);
   }
 
+  &__user {
+    display: none;
+    @include tablet {
+      display: inline;
+
+      color: lighten($neonPurple, 10%);
+      font-size: 1rem;
+      margin: 0 0.5rem 0 0.5rem;
+    }
+
+    @include desktop {
+      display: inline;
+
+      color: lighten($neonPurple, 10%);
+      font-size: 1rem;
+      margin: 0 0.5rem 0 0.5rem;
+    }
+  }
+
   &__emptyBoxContainer {
     @include tablet {
       @include flex(unset, row, center, center);
