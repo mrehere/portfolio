@@ -1,5 +1,5 @@
 import "./Footer.scss";
-
+import linkedinIcon from "../../assets/icons/linkedin.svg";
 function Footer() {
   const handleLinkedin = () => {
     window.open("https://www.linkedin.com/in/majedur");
@@ -12,6 +12,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer__findMe">find me in: </div>
       <div className="footer__socialContainer">
+        {/* linkedin */}
         <div className="footer__linkContainer" onClick={handleLinkedin}>
           <div className="footer__link">
             <svg
@@ -24,6 +25,12 @@ function Footer() {
             </svg>
           </div>
         </div>
+
+        <div className="footer__emptyBoxContainer">
+          <div className="footer__emptyBox"> </div>
+        </div>
+
+        {/* github */}
         <div className="footer__linkContainer" onClick={handleGithub}>
           <div className="footer__link">
             <svg

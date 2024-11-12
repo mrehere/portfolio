@@ -7,10 +7,24 @@
   &__findMe {
     color: lighten($neonPurple, 10%);
     margin-left: 1rem;
+
+    @include tablet {
+      width: 6rem;
+    }
+    @include desktop {
+      width: 6rem;
+    }
   }
 
   &__socialContainer {
     @include flex(unset, row, center, space-between);
+
+    @include tablet {
+      flex: 1;
+    }
+    @include desktop {
+      flex: 1;
+    }
   }
   &__linkContainer {
     @include flex(unset, row, center, center);
@@ -27,5 +41,29 @@
   }
   &__link svg {
     fill: darken($neonPurple, 40%);
+  }
+
+  &__emptyBoxContainer {
+    @include tablet {
+      @include flex(unset, row, center, center);
+      border-left: 0.5px solid darken($neonPurple, 40%);
+      padding: 0.5rem;
+      flex: 1;
+    }
+    @include desktop {
+      @include flex(unset, row, center, center);
+      border-left: 0.5px solid darken($neonPurple, 40%);
+      padding: 0.5rem;
+    }
+  }
+  &__emptyBox {
+    @include tablet {
+      height: 28.5px;
+      flex: 1;
+    }
+    @include desktop {
+      height: 28.5px;
+      flex: 1;
+    }
   }
 }
