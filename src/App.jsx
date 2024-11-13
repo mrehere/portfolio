@@ -14,10 +14,14 @@ function App() {
     <main className="viewBox">
       <BrowserRouter>
         <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <>
+          {!isMenuOpen && (
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          )}
+        </>
         <Footer />
       </BrowserRouter>
     </main>
