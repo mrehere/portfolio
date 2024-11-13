@@ -22,31 +22,17 @@
 
   // menu
 
-  // &__menu {
-  //   position: fixed;
-  //   top: 5%;
-  //   bottom: 3%;
-  //   left: 3%;
-  //   right: 3%;
-  //   background-color: darken($electricBlue, 37%);
-  //   color: #fff;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   z-index: 1000; // Ensure it appears above other content
+  &__listHolder {
+    list-style: none;
+  }
 
-  //   &-content {
-  //     text-align: center;
+  &__list {
+    padding: 0.5rem 1rem;
+    border-bottom: 0.5px solid darken($neonPurple, 40%);
+    color: lighten($neonPurple, 10%);
 
-  //     ul {
-  //       list-style: none;
-  //       padding: 0;
-
-  //       li {
-  //         font-size: 1.5rem;
-  //         margin: 1rem 0;
-  //       }
-  //     }
-  //   }
-  // }
+    &-active {
+      color: white;
+    }
+  }
 }
