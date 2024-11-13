@@ -12,6 +12,7 @@ function Nav({ isMenuOpen, setIsMenuOpen }) {
 
   return (
     <main className="nav">
+      {/* ------------ mobile nav ------------ */}
       <section className="nav__mobile-nav">
         <div
           onClick={() => {
@@ -31,15 +32,6 @@ function Nav({ isMenuOpen, setIsMenuOpen }) {
           }`}
           onClick={toggleMenu}
         />
-
-        {/* {isMenuOpen && (
-          <img
-            src={closeIcon}
-            alt="hamburger-icon"
-            className="nav__close"
-            onClick={toggleMenu}
-          />
-        )} */}
       </section>
 
       {isMenuOpen && (
@@ -84,6 +76,24 @@ function Nav({ isMenuOpen, setIsMenuOpen }) {
           </div>
         </section>
       )}
+
+      {/* ------------ tablet/desktop nav ------------ */}
+      <section className="nav__desktop-nav">
+        <div
+          onClick={() => {
+            navigate("/");
+          }}
+          className="nav__desktop-name"
+        >
+          majedur-rahman
+        </div>
+
+        <div className="nav__item">_hello</div>
+        <div className="nav__item">_about-me</div>
+        <div className="nav__item">_projects</div>
+        <div className="nav__emptyItem"> </div>
+        <div className="nav__item">_contact</div>
+      </section>
     </main>
   );
 }

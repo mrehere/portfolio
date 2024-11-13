@@ -57,4 +57,47 @@
       color: white;
     }
   }
+
+  // desktop nav
+  &__desktop-nav {
+    display: none;
+
+    @include tablet {
+      display: inline;
+      @include flex(unset, row, center, start);
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+    }
+    @include desktop {
+      display: inline;
+      @include flex(unset, row, center, start);
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+    }
+  }
+
+  &__item {
+    border-left: 0.5px solid darken($neonPurple, 40%);
+    width: 6rem;
+  }
+  &__emptyItem {
+    border-left: 0.5px solid darken($neonPurple, 40%);
+    padding: 0.5rem;
+    flex: 1;
+    height: 2rem;
+  }
+
+  &__desktop-name,
+  &__item {
+    color: lighten($neonPurple, 10%);
+    font-size: 13px;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  &__item {
+    text-align: center;
+    &:hover {
+      background-color: darken($electricBlue, 34%);
+      color: white;
+    }
+  }
 }
