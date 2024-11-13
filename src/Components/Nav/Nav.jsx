@@ -1,10 +1,9 @@
 import "./Nav.scss";
 import hamburgerIcon from "../../assets/icons/hamburger.svg";
 import closeIcon from "../../assets/icons/close.svg";
-import { useState } from "react";
 
-function Nav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+function Nav({ isMenuOpen, setIsMenuOpen }) {
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -43,9 +42,6 @@ function Nav() {
               <li>_projects</li>
               <li>_contact-me</li>
             </ul>
-            <button onClick={toggleMenu} className="nav__menu-close">
-              Close
-            </button>
           </div>
         </section>
       )}

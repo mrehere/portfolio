@@ -2,6 +2,7 @@
 @use "../../styles/partials/variables" as *;
 
 .nav {
+  // position: relative;
   &__mobile-nav {
     @include flex(100%, row, center, space-between);
     border-bottom: 0.5px solid darken($neonPurple, 40%);
@@ -18,4 +19,34 @@
   &__mobile-name {
     color: lighten($neonPurple, 10%);
   }
+
+  // menu
+
+  // &__menu {
+  //   position: fixed;
+  //   top: 5%;
+  //   bottom: 3%;
+  //   left: 3%;
+  //   right: 3%;
+  //   background-color: darken($electricBlue, 37%);
+  //   color: #fff;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   z-index: 1000; // Ensure it appears above other content
+
+  //   &-content {
+  //     text-align: center;
+
+  //     ul {
+  //       list-style: none;
+  //       padding: 0;
+
+  //       li {
+  //         font-size: 1.5rem;
+  //         margin: 1rem 0;
+  //       }
+  //     }
+  //   }
+  // }
 }
