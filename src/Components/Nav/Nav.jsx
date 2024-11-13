@@ -71,7 +71,17 @@ function Nav({ isMenuOpen, setIsMenuOpen }) {
               >
                 _projects
               </li>
-              <li className="nav__list">_contact</li>
+              <li
+                onClick={() => {
+                  navigate("/contact");
+                  toggleMenu();
+                }}
+                className={`nav__list ${
+                  path.pathname === "/contact" ? "nav__list-active" : ""
+                }`}
+              >
+                _contact
+              </li>
             </ul>
           </div>
         </section>
@@ -88,9 +98,36 @@ function Nav({ isMenuOpen, setIsMenuOpen }) {
           majedur-rahman
         </div>
 
-        <div className="nav__item">_hello</div>
-        <div className="nav__item">_about-me</div>
-        <div className="nav__item">_projects</div>
+        <div
+          onClick={() => {
+            navigate("/");
+          }}
+          className={`nav__item ${
+            path.pathname === "/" ? "nav__item-active" : ""
+          }`}
+        >
+          _hello
+        </div>
+        <div
+          onClick={() => {
+            navigate("/about");
+          }}
+          className={`nav__item ${
+            path.pathname === "/about" ? "nav__item-active" : ""
+          }`}
+        >
+          _about-me
+        </div>
+        <div
+          onClick={() => {
+            navigate("/projects");
+          }}
+          className={`nav__item ${
+            path.pathname === "/projects" ? "nav__item-active" : ""
+          }`}
+        >
+          _projects
+        </div>
         <div className="nav__emptyItem"> </div>
         <div className="nav__item">_contact</div>
       </section>
