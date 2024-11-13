@@ -1,11 +1,11 @@
 import "./Nav.scss";
 import hamburgerIcon from "../../assets/icons/hamburger.svg";
 import closeIcon from "../../assets/icons/close.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Nav({ isMenuOpen, setIsMenuOpen }) {
   const path = useLocation();
-  console.log(path.pathname);
+  const navigate = useNavigate();
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
@@ -39,6 +39,10 @@ function Nav({ isMenuOpen, setIsMenuOpen }) {
           <div className="nav__menu-content">
             <ul className="nav__listHolder">
               <li
+                onClick={() => {
+                  navigate("/");
+                  toggleMenu();
+                }}
                 className={`nav__list ${
                   path.pathname === "/" ? "nav__list-active" : ""
                 }`}
@@ -46,13 +50,27 @@ function Nav({ isMenuOpen, setIsMenuOpen }) {
                 _hello
               </li>
               <li
+                onClick={() => {
+                  navigate("/about");
+                  toggleMenu();
+                }}
                 className={`nav__list ${
                   path.pathname === "/about" ? "nav__list-active" : ""
                 }`}
               >
                 _about-me
               </li>
-              <li className="nav__list">_projects</li>
+              <li
+                onClick={() => {
+                  navigate("/projects");
+                  toggleMenu();
+                }}
+                className={`nav__list ${
+                  path.pathname === "/projects" ? "nav__list-active" : ""
+                }`}
+              >
+                _projects
+              </li>
               <li className="nav__list">_contact</li>
             </ul>
           </div>

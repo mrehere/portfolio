@@ -7,7 +7,8 @@ import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
 
 import Home from "./Pages/Home/Home";
-import About from "./Pages/Home/About/About";
+import About from "./Pages/About/About";
+import Projects from "./Pages/Projects/Projects";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -19,6 +20,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+
+              <Route path="/projects" element={<Projects />} />
             </Routes>
           )}
         </>
