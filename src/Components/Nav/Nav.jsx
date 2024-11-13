@@ -13,25 +13,33 @@ function Nav({ isMenuOpen, setIsMenuOpen }) {
   return (
     <main className="nav">
       <section className="nav__mobile-nav">
-        <div className="nav__mobile-name">majedur-rahman</div>
+        <div
+          onClick={() => {
+            navigate("/");
+            setIsMenuOpen(false);
+          }}
+          className="nav__mobile-name"
+        >
+          majedur-rahman
+        </div>
 
-        {!isMenuOpen && (
-          <img
-            src={hamburgerIcon}
-            alt="hamburger-icon"
-            className="nav__hamburger"
-            onClick={toggleMenu}
-          />
-        )}
+        <img
+          src={isMenuOpen ? closeIcon : hamburgerIcon}
+          alt="hamburger-icon"
+          className={`nav__hamburger ${
+            isMenuOpen ? "nav__close-icon" : "nav__hamburger-icon"
+          }`}
+          onClick={toggleMenu}
+        />
 
-        {isMenuOpen && (
+        {/* {isMenuOpen && (
           <img
             src={closeIcon}
             alt="hamburger-icon"
             className="nav__close"
             onClick={toggleMenu}
           />
-        )}
+        )} */}
       </section>
 
       {isMenuOpen && (

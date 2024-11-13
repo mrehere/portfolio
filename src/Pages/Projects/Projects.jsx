@@ -1,5 +1,10 @@
+import "./Projects.scss";
 function Projects() {
-  return <div>hello from project</div>;
+  return (
+    <main className="projects">
+      <div>hello from project</div>
+    </main>
+  );
 }
 
 export default Projects;

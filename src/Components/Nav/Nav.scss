@@ -20,8 +20,30 @@
     color: lighten($neonPurple, 10%);
   }
 
-  // menu
+  &__hamburger-icon,
+  &__close-icon {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  &__hamburger-icon {
+    animation: rotateHamburgerToClose 0.3s ease forwards;
+  }
 
+  &__close-icon {
+    animation: rotateCloseToHamburger 0.3s ease forwards;
+  }
+
+  // menu
+  &__menu {
+    animation: fadeCard 0.2s ease forwards;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
   &__listHolder {
     list-style: none;
   }

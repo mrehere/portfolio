@@ -1,5 +1,10 @@
+import "./About.scss";
 function About() {
-  return <div>hello from about</div>;
+  return (
+    <main className="about">
+      <div>hello from about</div>
+    </main>
+  );
 }
 
 export default About;
