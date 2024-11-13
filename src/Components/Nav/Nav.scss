@@ -55,6 +55,7 @@
 
     &-active {
       color: white;
+      background-color: darken($electricBlue, 34%);
     }
   }
 
@@ -96,9 +97,28 @@
 
   &__item {
     text-align: center;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $green;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      width: 0;
+
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
     &-active {
       color: white;
       background-color: darken($electricBlue, 34%);
+
+      &::after {
+        width: 100%;
+        transform: scaleX(1);
+      }
     }
     &:hover {
       background-color: darken($electricBlue, 34%);

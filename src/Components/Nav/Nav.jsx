@@ -129,7 +129,16 @@ function Nav({ isMenuOpen, setIsMenuOpen }) {
           _projects
         </div>
         <div className="nav__emptyItem"> </div>
-        <div className="nav__item">_contact</div>
+        <div
+          onClick={() => {
+            navigate("/contact");
+          }}
+          className={`nav__item ${
+            path.pathname === "/contact" ? "nav__item-active" : ""
+          }`}
+        >
+          _contact
+        </div>
       </section>
     </main>
   );
