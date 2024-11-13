@@ -58,6 +58,20 @@
     padding-top: 1rem;
     font-size: 1.25rem;
     color: $electricBlue;
+    font-weight: 500;
+
+    &-cursor {
+      font-weight: 500;
+      color: lighten($neonPurple, 10%);
+      animation: breathing 0.5s infinite alternate;
+    }
+
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+    }
   }
 
   &__info {

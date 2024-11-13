@@ -78,6 +78,14 @@
   }
 }
 
+@keyframes breathing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {
     @content;

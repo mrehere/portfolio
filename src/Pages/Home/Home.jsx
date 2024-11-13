@@ -1,5 +1,23 @@
+import { useState, useEffect } from "react";
 import "./Home.scss";
+
 function Home() {
+  const sentence = `> ${" "}Full-stack developer`;
+  const [text, setText] = useState("");
+  const typingSpeed = 100;
+
+  useEffect(() => {
+    let index = 0;
+    const intervalid = setInterval(() => {
+      if (index < sentence.length - 1) {
+        setText((prev) => prev + sentence[index]);
+        index++;
+      } else {
+        clearInterval(intervalid);
+      }
+    }, typingSpeed);
+    return () => clearInterval(intervalid);
+  }, []);
   return (
     <main className="home">
       <div className="home__gradient1"> </div>
@@ -7,7 +25,11 @@ function Home() {
       <div className="home__head">
         <p className="home__hello">Hello, I am</p>
         <h1 className="home__name">Majedur Rahman</h1>
-        <p className="home__designation">{`> Full-stack developer`}</p>
+        <div className="home__designation">
+          <span>{text}</span>
+
+          <span className="home__designation home__designation-cursor">|</span>
+        </div>
       </div>
 
       <div className="home__info">
