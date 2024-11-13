@@ -2,4 +2,28 @@
 @use "../../styles/partials/variables" as *;
 .home {
   animation: fadeCardFromTop 0.2s ease forwards;
+
+  &__head {
+    padding: 6rem 1rem 1rem 1rem;
+  }
+  &__hello {
+    color: lighten($neonPurple, 25%);
+    font-size: 1.125rem;
+  }
+  &__name {
+    padding-top: 0.5rem;
+    font-size: 3.625rem;
+    color: lighten($neonPurple, 25%);
+    font-weight: 600;
+  }
+
+  &__designation {
+    padding-top: 1rem;
+    font-size: 1.25rem;
+    color: $electricBlue;
+  }
+
+  &__info {
+    padding-top: 4rem;
+  }
 }
