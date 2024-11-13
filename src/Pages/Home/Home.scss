@@ -7,16 +7,38 @@
   &__gradient1 {
     background: radial-gradient(
       circle at 50% 50%,
-      #f5a089,
-      /* Lighter red */ rgba(145, 85, 255, 0.4)
-        /* Lighter, semi-transparent purple */
+      rgba(62, 255, 8, 0.25),
+      rgba(0, 184, 204, 0.1)
     );
-    border-radius: 0 50%;
+    border-radius: 0% 50%;
     position: absolute;
-    right: 0%;
-    top: 20%;
-    width: 100%;
-    height: 50%;
+    top: 15%;
+    width: 250px;
+    height: 250px;
+
+    left: 1%;
+    z-index: 10;
+
+    filter: blur(35px);
+  }
+
+  &__gradient2 {
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 184, 204, 0.1),
+      rgba(0, 184, 204, 0.1)
+    );
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+
+    top: 25%;
+
+    left: 22%;
+    rotate: 10deg;
+    width: 250px;
+    height: 250px;
+    filter: blur(25px);
+    z-index: 1;
   }
   &__head {
     padding: 6rem 1rem 1rem 1rem;
@@ -39,7 +61,7 @@
   }
 
   &__info {
-    padding: 4rem 1rem;
+    padding: 10rem 1rem;
   }
   &__infoTitle {
     padding-bottom: 1rem;

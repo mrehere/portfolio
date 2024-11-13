@@ -3,6 +3,7 @@ function Home() {
   return (
     <main className="home">
       <div className="home__gradient1"> </div>
+      <div className="home__gradient2"> </div>
       <div className="home__head">
         <p className="home__hello">Hello, I am</p>
         <h1 className="home__name">Majedur Rahman</h1>
