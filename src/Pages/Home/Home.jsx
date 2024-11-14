@@ -24,7 +24,9 @@ function Home() {
       <div className="home__gradient2"> </div>
       <div className="home__head">
         <p className="home__hello">Hello, I am</p>
-        <h1 className="home__name">Majedur Rahman</h1>
+        <h1 className="home__name">
+          Majedur <span className="home__name home__name-last">Rahman</span>
+        </h1>
         <div className="home__designation">
           <span>{text}</span>
 

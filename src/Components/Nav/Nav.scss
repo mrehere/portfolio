@@ -96,6 +96,9 @@
     cursor: pointer;
   }
 
+  &__desktop-name {
+    padding: 0 8rem 0 1.5rem;
+  }
   &__item {
     @include flex(unset, row, center, center);
     position: relative;
