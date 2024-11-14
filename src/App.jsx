@@ -16,7 +16,7 @@ function App() {
     <main className="viewBox">
       <BrowserRouter>
         <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        <>
+        <section className="viewBox__content">
           {!isMenuOpen && (
             <Routes>
               <Route path="/" element={<Home />} />
@@ -26,7 +26,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           )}
-        </>
+        </section>
         <Footer />
       </BrowserRouter>
     </main>
