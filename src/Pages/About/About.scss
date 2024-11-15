@@ -16,6 +16,15 @@
     }
   }
 
+  &__mobile-nav {
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
   &__nav-menu {
     padding: 0.25rem 1rem;
     margin: 0.25rem 0;
@@ -32,13 +41,6 @@
         rotate: 90deg;
       }
     }
-
-    @include tablet {
-      display: none;
-    }
-    @include desktop {
-      display: none;
-    }
   }
 
   &__menu-item-container {
@@ -49,6 +51,11 @@
     color: lighten($neonPurple, 20%);
     @include flex(unset, row, center, start);
     padding: 0.5rem 1rem 0.5rem 2.5rem;
+
+    &-active {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
   }
 
   &__item-img {
