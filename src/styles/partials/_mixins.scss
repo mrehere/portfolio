@@ -33,7 +33,59 @@
     transform: translateY(0);
   }
 }
+@keyframes fadeCardFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); /* Start off-screen above */
+  }
+  20% {
+    opacity: 0.2;
+    transform: translateY(-24px); /* Move closer to the final position */
+  }
+  40% {
+    opacity: 0.4;
+    transform: translateY(-18px);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translateY(-12px);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at its normal position */
+  }
+}
 
+@keyframes rotateHamburgerToClose {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateCloseToHamburger {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {
     @content;
