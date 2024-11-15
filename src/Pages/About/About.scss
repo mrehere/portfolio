@@ -26,9 +26,33 @@
       background-color: darken($electricBlue, 20%);
     }
     &-active {
-      svg {
+      background-color: darken($electricBlue, 20%);
+
+      img {
         rotate: 90deg;
       }
     }
+
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__menu-item-container {
+    animation: fadeCardFromTop 0.2s ease forwards;
+  }
+
+  &__menu-item {
+    color: lighten($neonPurple, 20%);
+    @include flex(unset, row, center, start);
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+  }
+
+  &__item-img {
+    width: 20px;
+    margin-right: 0.75rem;
   }
 }
