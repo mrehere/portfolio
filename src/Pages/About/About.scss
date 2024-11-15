@@ -1,3 +1,34 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 .about {
   animation: fadeCardFromTop 0.2s ease forwards;
+  @include flex(unset, column, unset, unset);
+
+  &__me {
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__nav-menu {
+    padding: 0.25rem 1rem;
+    margin: 0.25rem 0;
+    background-color: darken($electricBlue, 30%);
+    @include flex(unset, row, center, start);
+
+    &:active {
+      background-color: darken($electricBlue, 20%);
+    }
+    &-active {
+      svg {
+        rotate: 90deg;
+      }
+    }
+  }
 }
