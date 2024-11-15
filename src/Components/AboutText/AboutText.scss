@@ -1,0 +1,9 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.textContainer {
+  animation: fadeCardFromTop 0.3s ease forwards;
+}
+.alterTextContainer {
+  animation: fadeCard 0.3s ease forwards;
+}

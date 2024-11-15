@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./About.scss";
+import AboutText from "../../Components/AboutText/AboutText";
 
 import arrow from "../../assets/icons/arrow.svg";
 import experience from "../../assets/icons/about/experience.svg";
@@ -115,6 +116,7 @@ function About() {
           </div>
         )}
       </div>
+      <div>{<AboutText section={activeSubMenu} />}</div>
     </main>
   );
 }
