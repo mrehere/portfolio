@@ -24,9 +24,24 @@ import vs from "../../assets/icons/dev/vs.svg";
 import postman from "../../assets/icons/dev/postman.svg";
 import axios from "../../assets/icons/dev/axios.svg";
 import git from "../../assets/icons/dev/git.svg";
+import firebase from "../../assets/icons/dev/firebase.svg";
 import heroku from "../../assets/icons/dev/heroku.svg";
 import netlify from "../../assets/icons/dev/netlify.svg";
 
+// soft-skills
+import communcation from "../../assets/icons/soft/communication.svg";
+import teamwork from "../../assets/icons/soft/teamwork.svg";
+import problem from "../../assets/icons/soft/problem-solving.svg";
+import adaptivility from "../../assets/icons/soft/adaptivility.svg";
+import leadership from "../../assets/icons/soft/leadership.svg";
+import time from "../../assets/icons/soft/time-management.svg";
+import conflict from "../../assets/icons/soft/conflict-resolution.svg";
+import critical from "../../assets/icons/soft/critical-thinking.svg";
+import attention from "../../assets/icons/soft/attention.svg";
+import patience from "../../assets/icons/soft/patience.svg";
+import multitask from "../../assets/icons/soft/multi-task.svg";
+import empathy from "../../assets/icons/soft/empathy.svg";
+import innovative from "../../assets/icons/soft/innovative.svg";
 const AboutText = ({ section }) => {
   const content = {
     // ------------ pro-info----------
@@ -40,6 +55,7 @@ const AboutText = ({ section }) => {
             / hard-skills
           </span>
         </p>
+        {/* // --- hard-skills --- */}
         {/* languages */}
         <div className="text__skill-container">
           <p className="text__language-header">languages</p>
@@ -135,6 +151,11 @@ const AboutText = ({ section }) => {
               <img src={git} alt="" className="text__language-img" />
               <p className="text__language-item-subtitle">Git</p>
             </div>
+
+            <div className="text__language-item-container">
+              <img src={firebase} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Firebase</p>
+            </div>
             <div className="text__language-item-container">
               <img src={heroku} alt="" className="text__language-img" />
               <p className="text__language-item-subtitle">Heroku</p>
@@ -148,9 +169,81 @@ const AboutText = ({ section }) => {
       </div>
     ),
 
+    // ------- soft-skills----------
     "soft-skills": (
       <div className="text__container" id="soft-skills">
-        Paragraph: Soft Skills
+        <p className="text__header">
+          <span className="text__header text__header-section">
+            / / professional-info
+          </span>
+          <span className="text__header text__header-subSection">
+            / soft-skills
+          </span>
+        </p>
+
+        <div className="text__skill-container">
+          <p className="text__language-header">personal strengths</p>
+
+          <div className="text__language-container">
+            <div className="text__language-item-container">
+              <img src={communcation} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Communication</p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={teamwork} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Teamwork</p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={problem} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Problem Solving</p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={adaptivility} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Adaptivility</p>
+            </div>
+
+            <div className="text__language-item-container">
+              <img src={leadership} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Leadership</p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={time} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Time Management</p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={conflict} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">
+                Conflict Resolution
+              </p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={attention} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">
+                Attention-to-Details
+              </p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={empathy} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Empathy</p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={critical} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Critical Thinking</p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={innovative} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Creativity</p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={patience} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Patience</p>
+            </div>
+            <div className="text__language-item-container">
+              <img src={multitask} alt="" className="text__language-img" />
+              <p className="text__language-item-subtitle">Multitask</p>
+            </div>
+          </div>
+        </div>
       </div>
     ),
 
