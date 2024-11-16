@@ -24,14 +24,27 @@
   //hard skills
   &__skill-container {
     animation: fadeCardFromTop 0.3s ease forwards;
-    margin-left: 2rem;
+    margin: 0 0 1rem 2rem;
   }
   &__language-header {
     color: $electricBlue;
+    // color: $lightBlue;
+    // color: darken($green, 15%);
     font-weight: 600;
   }
+  &__language-container {
+    @include flex(unset, row, center, start);
+    flex-wrap: wrap;
+  }
+  &__language-item-container {
+    @include flex(unset, column, center, start);
+    margin-right: 0.5rem;
+  }
+  &__language-item-subtitle {
+    font-size: 12px;
+  }
   &__language-img {
-    width: 30px;
+    width: 2.5rem;
     margin: 0.5rem 0.25rem;
   }
 }
