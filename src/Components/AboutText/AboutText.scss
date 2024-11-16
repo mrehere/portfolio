@@ -35,6 +35,7 @@
   &__language-container {
     @include flex(unset, row, center, start);
     flex-wrap: wrap;
+    animation: fadeCardFromTop 0.3s ease forwards;
   }
   &__language-item-container {
     @include flex(unset, column, center, start);
@@ -50,6 +51,9 @@
   }
 
   // education
+  &__education-container {
+    animation: fadeCardFromTop 0.3s ease forwards;
+  }
   &__education {
     @include flex(unset, row, center, start);
     margin: 1rem 1rem 1rem 2rem;
@@ -88,6 +92,61 @@
     border: 1px solid $electricBlue;
     padding: 0.5rem;
     width: 9rem;
+  }
+
+  // hobby
+  &__hobby-container {
+    margin: 0 1rem;
+    animation: fadeCardFromTop 0.3s ease forwards;
+  }
+  &__hobby-logo {
+    @include flex(unset, row, center, start);
+    margin: 1rem 1rem;
+  }
+  &__hobby-img {
+    width: 100px;
+  }
+
+  &__hobby-line {
+    margin-left: 1rem;
+    color: white;
+    font-weight: 500;
+  }
+
+  &__hobby-section {
+    color: lighten($electricBlue, 30%);
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  &__hobby-item-container {
+    @include flex(unset, row, center, start);
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+    }
+  }
+  &__hobby-item {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.25rem;
+    border: 1px solid $electricBlue;
+    border-radius: 0.5rem;
+  }
+
+  &__hobby-item-2 {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.25rem;
+    border: 1px solid darken($lightBlue, 10%);
+    color: #ff6f61;
+    border-radius: 0.5rem;
+    font-weight: 600;
+
+    &:hover {
+      font-weight: 600;
+      transform: scale(1.1);
+
+      color: $neonPurple;
+    }
   }
 }
 

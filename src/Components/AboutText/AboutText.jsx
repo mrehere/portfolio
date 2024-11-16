@@ -48,6 +48,10 @@ import bs from "../../assets/logos/brainstation.webp";
 import mun from "../../assets/logos/mun.jpg";
 import aiub from "../../assets/logos/aiub.png";
 
+// hobbies
+import music from "../../assets/icons/about/music.svg";
+import game from "../../assets/icons/about/game.svg";
+
 const AboutText = ({ section }) => {
   const content = {
     // ------------ pro-info----------
@@ -361,22 +365,123 @@ const AboutText = ({ section }) => {
       </div>
     ),
 
+    // ---------- hobbies ----------
     hobbies: (
       <div className="text__container" id="hobbies">
-        Paragraph: hobbies
+        <p className="text__header">
+          <span className="text__header text__header-section">
+            / / personal-info
+          </span>
+          <span className="text__header text__header-subSection">
+            / hobbies
+          </span>
+        </p>
+
+        {/* favourite music */}
+        <div className="text__hobby-container">
+          <div className="text__hobby-logo">
+            <img src={music} alt="" className="text__hobby-img" />
+
+            <p className="text__hobby-line">
+              Exploring diverse genres of Music and playing the guitar
+            </p>
+          </div>
+
+          <p className="text__hobby-section">favourite genre</p>
+          <div className="text__hobby-item-container">
+            <p className="text__hobby-item">Rock</p>
+            <p className="text__hobby-item">Progressive Metal</p>
+            <p className="text__hobby-item">Folk</p>
+            <p className="text__hobby-item">Indian Classical</p>
+
+            <p className="text__hobby-item">Indie</p>
+          </div>
+
+          <p className="text__hobby-section">favourite bands</p>
+
+          {/* favourite bands */}
+          <div className="text__hobby-item-container">
+            <a
+              href="https://en.wikipedia.org/wiki/Artcell"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Artcell</p>
+            </a>
+            <a
+              href="https://en.wikipedia.org/wiki/Warfaze"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Warfaze</p>
+            </a>
+            <a
+              href="https://en.wikipedia.org/wiki/Meghdol"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Meghdol</p>
+            </a>
+
+            <a
+              href="https://en.wikipedia.org/wiki/Iron_Maiden"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Iron Maiden</p>
+            </a>
+            <a
+              href="https://en.wikipedia.org/wiki/Rush_(band)"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Rush</p>
+            </a>
+
+            <a
+              href="https://en.wikipedia.org/wiki/Dream_Theater"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Dream Theater</p>
+            </a>
+          </div>
+        </div>
+        {/* games */}
+        <div className="text__hobby-logo">
+          <img src={game} alt="" className="text__hobby-img" />
+
+          <p className="text__hobby-line">
+            Passionate about story-driven RPGs and immersive indie games
+          </p>
+        </div>
       </div>
     ),
 
     values: (
       <div className="text__container" id="hobbies">
-        Paragraph: values
+        <p className="text__header">
+          <span className="text__header text__header-section">
+            / / personal-info
+          </span>
+          <span className="text__header text__header-subSection">/ values</span>
+        </p>
       </div>
     ),
   };
 
   return (
     content[section] || (
-      <div className="alterTextContainer">Select a section to explore</div>
+      <div className="alterTextContainer">
+        <p className="text__header">
+          <span className="text__header text__header-section">
+            / / select a section to
+          </span>
+          <span className="text__header text__header-subSection">
+            / explore
+          </span>
+        </p>
+      </div>
     )
   );
 };
