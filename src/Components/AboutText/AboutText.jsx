@@ -52,6 +52,10 @@ import aiub from "../../assets/logos/aiub.png";
 import music from "../../assets/icons/about/music.svg";
 import game from "../../assets/icons/about/game.svg";
 
+// values
+import kindness from "../../assets/icons/values/kindness.svg";
+import loyalty from "../../assets/icons/values/loyalty.svg";
+import integrity from "../../assets/icons/values/adaptivility.svg";
 const AboutText = ({ section }) => {
   const content = {
     // ------------ pro-info----------
@@ -465,11 +469,13 @@ const AboutText = ({ section }) => {
             <p className="text__hobby-item">Indie</p>
 
             <p className="text__hobby-item">FPS</p>
+
+            <p className="text__hobby-item">RPG</p>
           </div>
 
           <p className="text__hobby-section">favourite-games</p>
 
-          {/* favourite bands */}
+          {/* favourite games */}
           <div className="text__hobby-item-container">
             <a
               href="https://en.wikipedia.org/wiki/Red_Dead_Redemption_2"
@@ -507,6 +513,14 @@ const AboutText = ({ section }) => {
             >
               <p className="text__hobby-item-2">Mass Effect trilogy</p>
             </a>
+
+            <a
+              href="https://en.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Witcher 3</p>
+            </a>
           </div>
         </div>
       </div>
@@ -520,6 +534,37 @@ const AboutText = ({ section }) => {
           </span>
           <span className="text__header text__header-subSection">/ values</span>
         </p>
+
+        <div className="text__hobby-logo">
+          <img src={kindness} alt="" className="text__hobby-img" />
+
+          <p className="text__hobby-line">
+            <span className="text__hobby-title">Kindness: </span>I strive to
+            approach every interaction with empathy and understanding, creating
+            positive experiences and building meaningful relationships.
+          </p>
+        </div>
+
+        <div className="text__hobby-logo">
+          <img src={loyalty} alt="" className="text__hobby-img" />
+
+          <p className="text__hobby-line">
+            <span className="text__hobby-title">Loyalty: </span>For me, loyalty
+            means being dependable and staying true to my commitments, fostering
+            trust in both personal and professional connections.
+          </p>
+        </div>
+
+        <div className="text__hobby-logo">
+          <img src={integrity} alt="" className="text__hobby-img" />
+
+          <p className="text__hobby-line">
+            <span className="text__hobby-title">Integrity: </span>A leaf
+            signifies being grounded yet thriving. I value integrity by staying
+            true to my principles, fostering genuine connections, and growing
+            through honest actions.
+          </p>
+        </div>
       </div>
     ),
   };
