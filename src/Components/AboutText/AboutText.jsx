@@ -42,6 +42,12 @@ import patience from "../../assets/icons/soft/patience.svg";
 import multitask from "../../assets/icons/soft/multi-task.svg";
 import empathy from "../../assets/icons/soft/empathy.svg";
 import innovative from "../../assets/icons/soft/innovative.svg";
+
+// education
+import bs from "../../assets/logos/brainstation.webp";
+import mun from "../../assets/logos/mun.jpg";
+import aiub from "../../assets/logos/aiub.png";
+
 const AboutText = ({ section }) => {
   const content = {
     // ------------ pro-info----------
@@ -247,9 +253,111 @@ const AboutText = ({ section }) => {
       </div>
     ),
 
+    // ------- education----------
     education: (
       <div className="text__container" id="education">
-        Paragraph: education
+        <p className="text__header">
+          <span className="text__header text__header-section">
+            / / professional-info
+          </span>
+          <span className="text__header text__header-subSection">
+            / education
+          </span>
+        </p>
+        {/* brainstation */}
+        <div className="text__education-container">
+          <div className="text__education">
+            <a
+              href="https://brainstation.io/online/software-engineering-bootcamp"
+              target="_blank"
+            >
+              <img
+                src={bs}
+                alt="brainstation"
+                className="text__education-img"
+              />
+            </a>
+
+            <div className="text__education-info">
+              <p className="text__education-degree">
+                <span className="text">Diploma, </span>
+                <span className="text__education-name">
+                  Software Engineering
+                </span>
+              </p>
+
+              <p className="text__education-location">Toronto, On</p>
+
+              <p className="text__education-grade">Grade: 93% / 100%</p>
+              <div className="text__education-timeline">
+                Aug 2024 - Nov 2024
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* mun */}
+        <div className="text__education-container">
+          <div className="text__education">
+            <a
+              href="https://www.mun.ca/engineering/graduate/programs/energy-systems-engineering/"
+              target="_blank"
+            >
+              <img
+                src={mun}
+                alt="brainstation"
+                className="text__education-img"
+              />
+            </a>
+
+            <div className="text__education-info">
+              <p className="text__education-degree">
+                <span className="text"> Master of Applied Science, </span>
+                <span className="text__education-name">
+                  Energy Systems Engineering
+                </span>
+              </p>
+
+              <p className="text__education-location">St. John's, Nl</p>
+
+              <p className="text__education-grade">GPA: 3.80 / 4.00</p>
+              <div className="text__education-timeline">
+                Sep 2021 - Apr 2023
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* aiub */}
+        <div className="text__education-container">
+          <div className="text__education">
+            <a
+              href="https://www.aiub.edu/faculties/engg/departments/eee"
+              target="_blank"
+            >
+              <img
+                src={aiub}
+                alt="brainstation"
+                className="text__education-img"
+              />
+            </a>
+
+            <div className="text__education-info">
+              <p className="text__education-degree">
+                <span className="text"> Bachelor of Science, </span>
+                <span className="text__education-name">
+                  Electrical & Electronics Engineering
+                </span>
+              </p>
+
+              <p className="text__education-location">Dhaka, Bangladesh</p>
+
+              <p className="text__education-grade">GPA: 3.98 / 4.00</p>
+              <div className="text__education-timeline">
+                Sep 2016 - Sep 2020
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     ),
 
