@@ -1,9 +1,41 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.textContainer {
-  animation: fadeCardFromTop 0.3s ease forwards;
+.text {
+  &__container {
+    animation: fadeCardFromTop 0.3s ease forwards;
+
+    @include flex(unset, column, unset, unset);
+  }
+
+  &__header {
+    margin: 1rem 0;
+    &-section {
+      color: white;
+      margin-left: 2rem;
+    }
+
+    &-subSection {
+      margin-left: 1rem;
+      color: lighten($neonPurple, 10%);
+    }
+  }
+
+  //hard skills
+  &__skill-container {
+    animation: fadeCardFromTop 0.3s ease forwards;
+    margin-left: 2rem;
+  }
+  &__language-header {
+    color: $electricBlue;
+    font-weight: 600;
+  }
+  &__language-img {
+    width: 30px;
+    margin: 0.5rem 0.25rem;
+  }
 }
+
 .alterTextContainer {
   animation: fadeCard 0.3s ease forwards;
 }
