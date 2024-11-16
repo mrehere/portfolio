@@ -383,11 +383,12 @@ const AboutText = ({ section }) => {
             <img src={music} alt="" className="text__hobby-img" />
 
             <p className="text__hobby-line">
-              Exploring diverse genres of Music and playing the guitar
+              <span className="text__hobby-title">MUSIC: </span>Exploring
+              diverse genres of Music and playing the guitar
             </p>
           </div>
 
-          <p className="text__hobby-section">favourite genre</p>
+          <p className="text__hobby-section">favourite-genre</p>
           <div className="text__hobby-item-container">
             <p className="text__hobby-item">Rock</p>
             <p className="text__hobby-item">Progressive Metal</p>
@@ -397,7 +398,7 @@ const AboutText = ({ section }) => {
             <p className="text__hobby-item">Indie</p>
           </div>
 
-          <p className="text__hobby-section">favourite bands</p>
+          <p className="text__hobby-section">favourite-bands</p>
 
           {/* favourite bands */}
           <div className="text__hobby-item-container">
@@ -446,14 +447,67 @@ const AboutText = ({ section }) => {
               <p className="text__hobby-item-2">Dream Theater</p>
             </a>
           </div>
-        </div>
-        {/* games */}
-        <div className="text__hobby-logo">
-          <img src={game} alt="" className="text__hobby-img" />
 
-          <p className="text__hobby-line">
-            Passionate about story-driven RPGs and immersive indie games
-          </p>
+          {/* games */}
+          <div className="text__hobby-logo">
+            <img src={game} alt="" className="text__hobby-img" />
+
+            <p className="text__hobby-line">
+              <span className="text__hobby-title">GAME: </span>Passionate about
+              story-driven RPGs and immersive indie games
+            </p>
+          </div>
+          <p className="text__hobby-section">favourite-genre</p>
+          <div className="text__hobby-item-container">
+            <p className="text__hobby-item">Open-World</p>
+            <p className="text__hobby-item">Action</p>
+            <p className="text__hobby-item">Narrative-Driven</p>
+            <p className="text__hobby-item">Indie</p>
+
+            <p className="text__hobby-item">FPS</p>
+          </div>
+
+          <p className="text__hobby-section">favourite-games</p>
+
+          {/* favourite bands */}
+          <div className="text__hobby-item-container">
+            <a
+              href="https://en.wikipedia.org/wiki/Red_Dead_Redemption_2"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">RDR 2</p>
+            </a>
+            <a
+              href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_IV"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">GTA IV</p>
+            </a>
+            <a
+              href="https://en.wikipedia.org/wiki/Life_Is_Strange"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Life is Strange</p>
+            </a>
+
+            <a
+              href="https://oxenfree.fandom.com/wiki/Oxenfree"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Oxenfree</p>
+            </a>
+            <a
+              href="https://en.wikipedia.org/wiki/Mass_Effect_Legendary_Edition"
+              target="_blank"
+              className="text__hobby-item-link"
+            >
+              <p className="text__hobby-item-2">Mass Effect trilogy</p>
+            </a>
+          </div>
         </div>
       </div>
     ),

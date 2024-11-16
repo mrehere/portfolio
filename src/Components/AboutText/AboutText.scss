@@ -98,10 +98,11 @@
   &__hobby-container {
     margin: 0 1rem;
     animation: fadeCardFromTop 0.3s ease forwards;
+    margin-bottom: 1rem;
   }
   &__hobby-logo {
     @include flex(unset, row, center, start);
-    margin: 1rem 1rem;
+    margin: 1.5rem 1rem;
   }
   &__hobby-img {
     width: 100px;
@@ -111,6 +112,10 @@
     margin-left: 1rem;
     color: white;
     font-weight: 500;
+  }
+  &__hobby-title {
+    font-weight: bold;
+    color: $green;
   }
 
   &__hobby-section {
