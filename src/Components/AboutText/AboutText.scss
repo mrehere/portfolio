@@ -6,6 +6,13 @@
     animation: fadeCardFromTop 0.3s ease forwards;
 
     @include flex(unset, column, unset, unset);
+
+    @include tablet {
+      padding: 0.5rem 0;
+    }
+    @include desktop {
+      padding: 0.5rem 0;
+    }
   }
 
   &__header {
@@ -18,6 +25,13 @@
     &-subSection {
       margin-left: 1rem;
       color: lighten($neonPurple, 10%);
+    }
+
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
     }
   }
 

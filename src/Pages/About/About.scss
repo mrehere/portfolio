@@ -3,6 +3,15 @@
 .about {
   animation: fadeCardFromTop 0.2s ease forwards;
   @include flex(unset, column, unset, unset);
+  height: 100%;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
 
   &__me {
     font-weight: normal;
@@ -52,14 +61,145 @@
     @include flex(unset, row, center, start);
     padding: 0.5rem 1rem 0.5rem 2.5rem;
 
+    @include tablet {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    @include desktop {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+
     &-active {
       transform: scale(1.1);
       transition: transform 0.2s ease-in-out;
+
+      @include tablet {
+        color: lighten($electricBlue, 20%);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
   &__item-img {
     width: 20px;
     margin-right: 0.75rem;
+  }
+
+  // desktop-nav
+
+  &__desktop-nav {
+    display: none;
+    @include tablet {
+      display: inline;
+      @include flex(5rem, column, center, start);
+      height: 100%;
+
+      border-right: 0.5px solid darken($neonPurple, 40%);
+    }
+    @include desktop {
+      display: inline;
+      @include flex(5rem, column, center, start);
+      height: 100%;
+
+      border-right: 0.5px solid darken($neonPurple, 40%);
+    }
+  }
+
+  &__desktop-nav-img {
+    svg {
+      width: 24px;
+      fill: lighten($neonPurple, 10%);
+      margin: 1rem 0;
+      cursor: pointer;
+    }
+    &-active {
+      svg {
+        fill: lighten($green, 20%);
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__menu-desktop-container {
+    display: none;
+    @include tablet {
+      display: inline;
+      @include flex(unset, column, center, start);
+      height: 100%;
+      border-right: 0.5px solid darken($neonPurple, 40%);
+      width: 10rem;
+    }
+
+    @include desktop {
+      display: inline;
+      @include flex(unset, column, center, start);
+      height: 100%;
+      border-right: 0.5px solid darken($neonPurple, 40%);
+      width: 10rem;
+    }
+  }
+
+  &__desktop-menu-header {
+    display: none;
+
+    @include tablet {
+      display: inline;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0.5rem;
+      background-color: darken($electricBlue, 34%);
+    }
+
+    @include desktop {
+      display: inline;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0.5rem;
+      background-color: darken($electricBlue, 34%);
+    }
+  }
+
+  &__description-container {
+    width: 100%;
+
+    @include tablet {
+      @include flex(30vw, column, unset, unset);
+      border-right: 0.5px solid darken($neonPurple, 40%);
+    }
+    @include desktop {
+      @include flex(30vw, column, unset, unset);
+      border-right: 0.5px solid darken($neonPurple, 40%);
+    }
+  }
+
+  &__desktop-menu-description-header {
+    display: none;
+
+    @include tablet {
+      display: inline;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0.5rem;
+
+      color: lighten($neonPurple, 10%);
+    }
+
+    @include desktop {
+      display: inline;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0.5rem;
+
+      color: lighten($neonPurple, 10%);
+    }
   }
 }
