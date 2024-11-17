@@ -9,9 +9,11 @@
 
     @include tablet {
       padding: 0.5rem 0;
+      height: 100vh;
     }
     @include desktop {
       padding: 0.5rem 0;
+      height: 100vh;
     }
   }
 

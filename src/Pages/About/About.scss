@@ -3,14 +3,16 @@
 .about {
   animation: fadeCardFromTop 0.2s ease forwards;
   @include flex(unset, column, unset, unset);
-  height: auto;
+  // height: 100vh;
 
   @include tablet {
     flex-direction: row;
+    height: 200vh;
   }
 
   @include desktop {
     flex-direction: row;
+    height: 200vh;
   }
 
   &__me {
@@ -94,13 +96,13 @@
     @include tablet {
       display: inline;
       @include flex(5rem, column, center, start);
-
+      height: auto;
       border-right: 0.5px solid darken($neonPurple, 40%);
     }
     @include desktop {
       display: inline;
       @include flex(5rem, column, center, start);
-
+      height: auto;
       border-right: 0.5px solid darken($neonPurple, 40%);
     }
   }
@@ -128,7 +130,7 @@
     @include tablet {
       display: inline;
       @include flex(unset, column, center, start);
-
+      height: auto;
       border-right: 0.5px solid darken($neonPurple, 40%);
       width: 10rem;
     }
@@ -136,7 +138,7 @@
     @include desktop {
       display: inline;
       @include flex(unset, column, center, start);
-
+      height: auto;
       border-right: 0.5px solid darken($neonPurple, 40%);
       width: 10rem;
     }
@@ -168,11 +170,11 @@
     width: 100%;
 
     @include tablet {
-      @include flex(30vw, column, unset, unset);
+      @include flex(35vw, column, unset, unset);
       border-right: 0.5px solid darken($neonPurple, 40%);
     }
     @include desktop {
-      @include flex(30vw, column, unset, unset);
+      @include flex(35vw, column, unset, unset);
       border-right: 0.5px solid darken($neonPurple, 40%);
     }
   }
