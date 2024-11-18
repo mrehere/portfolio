@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./About.scss";
 import AboutText from "../../Components/AboutText/AboutText";
+import Gist from "../../Components/Gist/Gist";
 
 import arrow from "../../assets/icons/arrow.svg";
 import experience from "../../assets/icons/about/experience.svg";
@@ -236,7 +237,11 @@ function About() {
 
       <div className="about__snippet-container">
         <div className="about__snippet-header"></div>
-        <div className="about__code-container"></div>
+        <div className="about__code-container">
+          <div className="about__code-container">
+            <Gist />
+          </div>
+        </div>
       </div>
     </main>
   );
