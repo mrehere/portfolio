@@ -236,11 +236,10 @@ function About() {
       </div>
 
       <div className="about__snippet-container">
-        <div className="about__snippet-header"></div>
+        <div className="about__snippet-header">/ / code-snippet-showcase:</div>
+
         <div className="about__code-container">
-          <div className="about__code-container">
-            <Gist />
-          </div>
+          <Gist />
         </div>
       </div>
     </main>
