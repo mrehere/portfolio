@@ -3,6 +3,8 @@ import axios from "axios";
 import "./Gist.scss";
 import { useEffect, useState } from "react";
 
+import details from "../../assets/icons/details.svg";
+import close from "../../assets/icons/close.svg";
 function Gist() {
   const token =
     "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";
@@ -14,6 +16,12 @@ function Gist() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  const [detailsStatus, setDetailsStatus] = useState(false);
+
+  const handleDetails = () => {
+    setDetailsStatus((prev) => !prev);
+    console.log(detailsStatus);
+  };
   useEffect(() => {
     const fetchGists = async () => {
       try {
@@ -73,9 +81,34 @@ function Gist() {
 
   return (
     <section className="gist">
+      <div className="gist__details-date">
+        <p className="gist__date">date 4343</p>
+        <div onClick={handleDetails} className="gist__button-container">
+          <img
+            className="gist__img
+          "
+            src={details}
+            alt=""
+          />
+          <button className="gist__button">details</button>
+        </div>
+      </div>
       <pre className="gist__pre">
         <code>{code}</code>
       </pre>
+      {detailsStatus && (
+        <div className="gist__details-container">
+          <p className="gist__details">
+            this is just a dummy details to work with :D
+          </p>
+          <img
+            className="gist__close"
+            onClick={handleDetails}
+            src={close}
+            alt=""
+          />
+        </div>
+      )}
     </section>
   );
 }
