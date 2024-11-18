@@ -203,3 +203,24 @@
     }
   }
 }
+
+// snippet
+.about {
+  &__snippet-container {
+    @include flex(100%, column, center, start);
+    flex: 1;
+  }
+
+  &__snippet-header {
+    @include tablet {
+      height: 2.25rem;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+    }
+    @include desktop {
+      height: 2.25rem;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+    }
+  }
+}

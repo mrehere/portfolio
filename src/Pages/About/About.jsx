@@ -233,6 +233,11 @@ function About() {
         </p>
         {<AboutText section={activeSubMenu} />}
       </div>
+
+      <div className="about__snippet-container">
+        <div className="about__snippet-header"></div>
+        <div className="about__code-container"></div>
+      </div>
     </main>
   );
 }
