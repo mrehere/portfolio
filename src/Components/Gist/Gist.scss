@@ -5,6 +5,7 @@
   // height: 30vh;
   @include flex(100%, column, center, center);
   margin: 1rem;
+  padding: 1rem;
 
   &__snippet-container {
     height: 30vh;
