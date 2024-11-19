@@ -2,4 +2,174 @@
 @use "../../styles/partials/variables" as *;
 .projects {
   animation: fadeCardFromTop 0.2s ease forwards;
+  padding: 2rem 1rem;
+  @include flex(100%, column, center, center);
+
+  @include tablet {
+    @include flex(100%, row, center, center);
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    @include flex(100%, row, center, center);
+    flex-wrap: wrap;
+  }
+
+  &__container {
+    @include flex(100%, column, center, center);
+    margin-bottom: 2rem;
+
+    @include tablet {
+      width: 19rem;
+      margin: 2rem 1rem;
+    }
+
+    @include desktop {
+      width: 19rem;
+      margin: 2rem 1rem;
+    }
+  }
+  &__name {
+    color: lighten($electricBlue, 30%);
+    font-weight: 500;
+  }
+  &__name-view-container {
+    @include flex(100%, row, center, space-between);
+    padding: 0 1rem;
+  }
+
+  &__view-button {
+    border: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    background: linear-gradient(
+      135deg,
+      darken($neonPurple, 20%),
+      darken($electricBlue, 20%)
+    );
+    color: #fff;
+
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(
+        135deg,
+        darken($green, 20%),
+        darken($lightBlue, 20%)
+      );
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(
+        135deg,
+        darken($electricBlue, 20%),
+        darken($lightBlue, 30%)
+      );
+    }
+  }
+
+  &__thumbnail-container {
+    margin: 1rem;
+    padding: 1rem;
+    width: 80vw;
+    height: 15rem;
+    border-radius: 1rem;
+    border: 2px solid darken($neonPurple, 40%);
+    background-color: darken($neonPurple, 50%);
+    @include flex(100%, column, center, center);
+  }
+  &__thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  &__details {
+    @include flex(100%, row, center, space-between);
+    padding: 0 0.5rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__name-tech {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__tech-container {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      &::after {
+        animation: fadeCardFromTop 0.2s ease forwards;
+        content: attr(data-id);
+        // display: block;
+        // width: 20px;
+        // height: 20px;
+        // background-color: red;
+        position: absolute;
+        top: 95%;
+        left: 4%;
+        font-weight: 600;
+        color: lighten($green, 30%);
+      }
+    }
+  }
+
+  &__tech {
+    width: 2rem;
+    padding: 0.5rem 0.2rem;
+  }
+
+  &__button-container {
+    @include flex(6rem, row, center, flex-end);
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__description {
+    color: lighten($green, 30%);
+  }
+
+  &__img {
+    width: 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  &__button {
+    font-size: 0.75rem;
+
+    color: $neonPurple;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__description-container {
+    @include flex(100%, row, center, space-between);
+    margin: 1rem 2rem;
+    animation: fadeCardFromTop 0.2s ease forwards;
+  }
+
+  &__close {
+    cursor: pointer;
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
 }
