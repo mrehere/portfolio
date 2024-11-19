@@ -5,8 +5,29 @@
   padding: 2rem 1rem;
   @include flex(100%, column, center, center);
 
+  @include tablet {
+    @include flex(100%, row, center, center);
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    @include flex(100%, row, center, center);
+    flex-wrap: wrap;
+  }
+
   &__container {
     @include flex(100%, column, center, center);
+    margin-bottom: 2rem;
+
+    @include tablet {
+      width: 19rem;
+      margin: 2rem 1rem;
+    }
+
+    @include desktop {
+      width: 19rem;
+      margin: 2rem 1rem;
+    }
   }
   &__name {
     color: lighten($electricBlue, 30%);
@@ -78,6 +99,27 @@
 
     a {
       text-decoration: none;
+    }
+  }
+
+  &__name-tech {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__tech-container {
+    &:hover {
+      &::after {
+        content: attr(data-id);
+        // display: block;
+        // width: 20px;
+        // height: 20px;
+        // background-color: red;
+        position: absolute;
+        top: 80%;
+        left: 4%;
+      }
     }
   }
 
