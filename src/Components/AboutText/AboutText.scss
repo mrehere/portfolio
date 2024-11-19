@@ -1,0 +1,188 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.text {
+  &__container {
+    animation: fadeCardFromTop 0.3s ease forwards;
+
+    @include flex(unset, column, unset, unset);
+
+    @include tablet {
+      padding: 0.5rem 0;
+      height: 100vh;
+    }
+    @include desktop {
+      padding: 0.5rem 0;
+      height: 100vh;
+    }
+  }
+
+  &__header {
+    margin: 1rem 0;
+    &-section {
+      color: white;
+      margin-left: 2rem;
+    }
+
+    &-subSection {
+      margin-left: 1rem;
+      color: lighten($neonPurple, 10%);
+    }
+
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  //hard skills
+  &__skill-container {
+    animation: fadeCardFromTop 0.3s ease forwards;
+    margin: 0 0 1rem 2rem;
+  }
+  &__language-header {
+    color: lighten($electricBlue, 30%);
+    // color: $lightBlue;
+    // color: darken($green, 15%);
+    font-weight: 600;
+  }
+  &__language-container {
+    @include flex(unset, row, center, start);
+    flex-wrap: wrap;
+    animation: fadeCardFromTop 0.3s ease forwards;
+  }
+  &__language-item-container {
+    @include flex(unset, column, center, start);
+    margin-right: 0.5rem;
+  }
+  &__language-item-subtitle {
+    font-size: 12px;
+  }
+  &__language-img {
+    width: 2.5rem;
+    height: 3rem;
+    margin: 0.5rem 0.25rem;
+
+    @include tablet {
+      width: 5rem;
+      height: 4.5rem;
+      margin: 1rem 0.5rem;
+    }
+
+    @include desktop {
+      width: 5rem;
+      height: 4.5rem;
+      margin: 1rem 0.5rem;
+    }
+  }
+
+  // education
+  &__education-container {
+    animation: fadeCardFromTop 0.3s ease forwards;
+  }
+  &__education {
+    @include flex(unset, row, center, start);
+    margin: 1rem 1rem 1rem 2rem;
+  }
+
+  &__education-img {
+    width: 4rem;
+    cursor: pointer;
+  }
+  &__education-info {
+    margin-left: 1rem;
+  }
+  &__education-degree {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__education-degree {
+  }
+  &__education-name {
+    color: lighten($electricBlue, 30%);
+    font-weight: 500;
+  }
+
+  &__education-location,
+  &__education-grade {
+    margin-bottom: 0.75rem;
+  }
+
+  &__education-grade {
+    color: $green;
+    font-weight: 500;
+  }
+  &__education-timeline {
+    font-size: 0.75rem;
+    border: 1px solid $electricBlue;
+    padding: 0.5rem;
+    width: 9rem;
+  }
+
+  // hobby
+  &__hobby-container {
+    margin: 0 1rem;
+    animation: fadeCardFromTop 0.3s ease forwards;
+    margin-bottom: 1rem;
+  }
+  &__hobby-logo {
+    @include flex(unset, row, center, start);
+    margin: 1.5rem 1rem;
+  }
+  &__hobby-img {
+    width: 100px;
+  }
+
+  &__hobby-line {
+    margin-left: 1rem;
+    color: white;
+    font-weight: 500;
+  }
+  &__hobby-title {
+    font-weight: bold;
+    color: $green;
+  }
+
+  &__hobby-section {
+    color: lighten($electricBlue, 30%);
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  &__hobby-item-container {
+    @include flex(unset, row, center, start);
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+    }
+  }
+  &__hobby-item {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.25rem;
+    border: 1px solid $electricBlue;
+    border-radius: 0.5rem;
+  }
+
+  &__hobby-item-2 {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.25rem;
+    border: 1px solid darken($lightBlue, 10%);
+    color: #ff6f61;
+    border-radius: 0.5rem;
+    font-weight: 600;
+
+    &:hover {
+      font-weight: 600;
+      transform: scale(1.1);
+
+      color: $neonPurple;
+    }
+  }
+}
+
+.alterTextContainer {
+  animation: fadeCard 0.3s ease forwards;
+}
