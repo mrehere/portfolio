@@ -66,7 +66,7 @@ function Projects() {
               <img src={js} alt="" className="projects__tech" />
             </div>
 
-            <div data-id="firebase" className="projects__tech-container">
+            <div data-id="Firebase" className="projects__tech-container">
               <img src={firebase} alt="" className="projects__tech" />
             </div>
           </div>
@@ -126,11 +126,11 @@ function Projects() {
         <div className="projects__details">
           {/* ----- */}
           <div className="projects__name-tech">
-            <div data-id="express.js" className="projects__tech-container">
+            <div data-id="Express.js" className="projects__tech-container">
               <img src={express} alt="" className="projects__tech" />
             </div>
 
-            <div data-id="node.js" className="projects__tech-container">
+            <div data-id="Node.js" className="projects__tech-container">
               <img src={node} alt="" className="projects__tech" />
             </div>
 
@@ -207,14 +207,14 @@ function Projects() {
               <img src={js} alt="" className="projects__tech" />
             </div>
 
-            <div data-id="express.js" className="projects__tech-container">
+            <div data-id="Express.js" className="projects__tech-container">
               <img src={express} alt="" className="projects__tech" />
             </div>
 
             <div data-id="MySQL" className="projects__tech-container">
               <img src={mysql} alt="" className="projects__tech" />
             </div>
-            <div data-id="knex.js" className="projects__tech-container">
+            <div data-id="Knex.js" className="projects__tech-container">
               <img src={knex} alt="" className="projects__tech" />
             </div>
           </div>
@@ -334,7 +334,10 @@ function Projects() {
         <div className="projects__name-view-container">
           <p className="projects__name">_brainflix-api</p>
 
-          <a href="https://mrehere-brainflix.netlify.app/" target="_blank">
+          <a
+            href="https://mrehere-brainflix-api-349537f543d4.herokuapp.com/"
+            target="_blank"
+          >
             <button className="projects__view-button">view-project</button>
           </a>
         </div>
@@ -346,15 +349,15 @@ function Projects() {
         <div className="projects__details">
           {/* ----- */}
           <div className="projects__name-tech">
-            <div data-id="express.js" className="projects__tech-container">
+            <div data-id="Express.js" className="projects__tech-container">
               <img src={express} alt="" className="projects__tech" />
             </div>
 
-            <div data-id="postman" className="projects__tech-container">
+            <div data-id="Postman" className="projects__tech-container">
               <img src={postman} alt="" className="projects__tech" />
             </div>
 
-            <div data-id="heroku" className="projects__tech-container">
+            <div data-id="Heroku" className="projects__tech-container">
               <img src={heroku} alt="" className="projects__tech" />
             </div>
           </div>
@@ -410,11 +413,11 @@ function Projects() {
         <div className="projects__details">
           {/* ----- */}
           <div className="projects__name-tech">
-            <div data-id="html" className="projects__tech-container">
+            <div data-id="Html" className="projects__tech-container">
               <img src={html} alt="" className="projects__tech" />
             </div>
 
-            <div data-id="css" className="projects__tech-container">
+            <div data-id="Css" className="projects__tech-container">
               <img src={css} alt="" className="projects__tech" />
             </div>
 
@@ -426,11 +429,11 @@ function Projects() {
               <img src={js} alt="" className="projects__tech" />
             </div>
 
-            <div data-id="postman" className="projects__tech-container">
+            <div data-id="Postman" className="projects__tech-container">
               <img src={postman} alt="" className="projects__tech" />
             </div>
 
-            <div data-id="axios" className="projects__tech-container">
+            <div data-id="Axios" className="projects__tech-container">
               <img src={axios} alt="" className="projects__tech" />
             </div>
           </div>
@@ -488,11 +491,11 @@ function Projects() {
         <div className="projects__details">
           {/* ----- */}
           <div className="projects__name-tech">
-            <div data-id="html" className="projects__tech-container">
+            <div data-id="Html" className="projects__tech-container">
               <img src={html} alt="" className="projects__tech" />
             </div>
 
-            <div data-id="css" className="projects__tech-container">
+            <div data-id="Css" className="projects__tech-container">
               <img src={css} alt="" className="projects__tech" />
             </div>
           </div>
