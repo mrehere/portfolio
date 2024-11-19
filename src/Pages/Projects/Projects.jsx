@@ -2,7 +2,7 @@ import "./Projects.scss";
 function Projects() {
   return (
     <main className="projects">
-      <div>hello from project</div>
+      <div className="projects__container"></div>
     </main>
   );
 }
