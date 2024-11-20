@@ -18,6 +18,13 @@
 
   &__mobile-name {
     color: lighten($neonPurple, 10%);
+
+    transition: transform ease 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__hamburger-icon,
@@ -98,6 +105,13 @@
 
   &__desktop-name {
     padding: 0 8rem 0 1.5rem;
+
+    transition: transform ease 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__item {
     @include flex(unset, row, center, center);
