@@ -10,6 +10,16 @@
     flex-wrap: wrap;
   }
 
+  &__projects {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+    margin-right: auto;
+    @include tablet {
+      display: none;
+    }
+  }
+
   @include desktop {
     @include flex(100%, row, center, center);
     flex-wrap: wrap;

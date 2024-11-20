@@ -37,6 +37,7 @@ function Projects() {
   };
   return (
     <main className="projects">
+      <h2 className="projects__projects">_projects</h2>
       {/* project easer */}
       <div className="projects__container">
         <div className="projects__name-view-container">
