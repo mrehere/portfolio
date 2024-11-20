@@ -1,0 +1,90 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.contact {
+  animation: fadeCardFromTop 0.2s ease forwards;
+  @include flex(100%, column, center, center);
+  padding: 2rem 1rem;
+  &__contact {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+    margin-right: auto;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__text {
+    color: $lightBlue;
+    text-align: center;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text-container {
+    @include flex(100%, column, center, center);
+    margin: 1rem;
+    padding: 1rem;
+    width: 80vw;
+    height: 15rem;
+    border-radius: 1rem;
+    border: 2px solid darken($neonPurple, 40%);
+    background-color: darken($neonPurple, 50%);
+  }
+  &__reache-me {
+    font-weight: 500;
+    font-size: 1rem;
+    color: lighten($neonPurple, 10%);
+    margin: 1rem 1rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+    }
+  }
+  &__link-container {
+    @include flex(100%, row, center, center);
+    gap: 4rem;
+  }
+  &__mail-container {
+    fill: lighten($electricBlue, 10%);
+    width: 4rem;
+    height: 4rem;
+    // margin-left: 2rem;
+    transition: transform 0.3s ease;
+
+    text-decoration: none;
+    color: transparent;
+
+    font-size: 12px;
+    text-align: center;
+    @include tablet {
+      width: 6rem;
+      height: 6rem;
+      font-size: 1rem;
+    }
+    @include desktop {
+      width: 6rem;
+      height: 6rem;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      fill: lighten($electricBlue, 30%);
+      cursor: pointer;
+      transform: scale(1.2);
+      color: lighten($electricBlue, 30%);
+    }
+  }
+}

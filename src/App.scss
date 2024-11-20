@@ -1,0 +1,59 @@
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
+.viewBox {
+  @include flex(unset, column, normal, unset);
+
+  border: 1px solid darken($neonPurple, 40%);
+  height: 95vh;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: darken($electricBlue, 37%);
+  margin: 15px;
+
+  @include tablet {
+    height: 92vh;
+    margin: 30px;
+  }
+
+  @include desktop {
+    height: 92vh;
+    margin: 30px;
+  }
+
+  &__content {
+    flex: 1 1 auto; // This allows it to grow and take up remaining space
+    overflow-y: auto; // Allows vertical scrolling if needed
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar Styles */
+  &::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    background-color: transparent; /* Background of the scrollbar area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darken(
+      $electricBlue,
+      30%
+    ); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    transition: background-color 0.3s ease-in-out; /* Smooth color transition */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: darken($electricBlue, 50%); /* Darken on hover */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Track background */
+    border-radius: 10px;
+  }
+
+  scrollbar-width: thin; /* Makes the scrollbar thin */
+  scrollbar-color: darken($electricBlue, 30%) rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  margin-top: auto;
+}

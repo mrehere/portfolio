@@ -1,0 +1,237 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+.about {
+  animation: fadeCardFromTop 0.2s ease forwards;
+  @include flex(unset, column, unset, unset);
+  // height: 100vh;
+
+  @include tablet {
+    flex-direction: row;
+    height: 200vh;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    height: 200vh;
+  }
+
+  &__me {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__mobile-nav {
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__nav-menu {
+    padding: 0.25rem 1rem;
+    margin: 0.25rem 0;
+    background-color: darken($electricBlue, 30%);
+    @include flex(unset, row, center, start);
+
+    &:active {
+      background-color: darken($electricBlue, 20%);
+    }
+    &-active {
+      background-color: darken($electricBlue, 20%);
+
+      img {
+        rotate: 90deg;
+      }
+    }
+  }
+
+  &__menu-item-container {
+    animation: fadeCardFromTop 0.2s ease forwards;
+  }
+
+  &__menu-item {
+    color: lighten($neonPurple, 20%);
+    @include flex(unset, row, center, start);
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+
+    @include tablet {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    @include desktop {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+
+    &-active {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in-out;
+
+      @include tablet {
+        color: lighten($electricBlue, 20%);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__item-img {
+    width: 20px;
+    margin-right: 0.75rem;
+  }
+
+  // desktop-nav
+
+  &__desktop-nav {
+    display: none;
+    @include tablet {
+      display: inline;
+      @include flex(5rem, column, center, start);
+      height: auto;
+      border-right: 0.5px solid darken($neonPurple, 40%);
+    }
+    @include desktop {
+      display: inline;
+      @include flex(5rem, column, center, start);
+      height: auto;
+      border-right: 0.5px solid darken($neonPurple, 40%);
+    }
+  }
+
+  &__desktop-nav-img {
+    svg {
+      width: 24px;
+      fill: lighten($neonPurple, 10%);
+      margin: 1rem 0;
+      cursor: pointer;
+    }
+    &-active {
+      svg {
+        fill: lighten($green, 20%);
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__menu-desktop-container {
+    display: none;
+    @include tablet {
+      display: inline;
+      @include flex(unset, column, center, start);
+      height: auto;
+      border-right: 0.5px solid darken($neonPurple, 40%);
+      width: 10rem;
+    }
+
+    @include desktop {
+      display: inline;
+      @include flex(unset, column, center, start);
+      height: auto;
+      border-right: 0.5px solid darken($neonPurple, 40%);
+      width: 10rem;
+    }
+  }
+
+  &__desktop-menu-header {
+    display: none;
+
+    @include tablet {
+      display: inline;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0.5rem;
+      background-color: darken($electricBlue, 34%);
+    }
+
+    @include desktop {
+      display: inline;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0.5rem;
+      background-color: darken($electricBlue, 34%);
+    }
+  }
+
+  &__description-container {
+    width: 100%;
+
+    @include tablet {
+      @include flex(35vw, column, unset, unset);
+      border-right: 0.5px solid darken($neonPurple, 40%);
+    }
+    @include desktop {
+      @include flex(35vw, column, unset, unset);
+      border-right: 0.5px solid darken($neonPurple, 40%);
+    }
+  }
+
+  &__desktop-menu-description-header {
+    display: none;
+
+    @include tablet {
+      display: inline;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0.5rem;
+
+      color: lighten($neonPurple, 10%);
+    }
+
+    @include desktop {
+      display: inline;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0.5rem;
+
+      color: lighten($neonPurple, 10%);
+    }
+  }
+}
+
+// snippet
+.about {
+  &__snippet-container {
+    @include flex(90vw, column, normal, start);
+    flex: 1;
+    // padding: 1rem 0;
+    color: lighten($neonPurple, 10%);
+  }
+
+  &__snippet-header {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    font-weight: 500;
+    @include tablet {
+      font-weight: 400;
+      margin: 0;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+    }
+    @include desktop {
+      font-weight: 400;
+      margin: 0;
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+      width: 100%;
+    }
+  }
+
+  &__code-container {
+    @include flex(100%, row, center, center);
+  }
+}

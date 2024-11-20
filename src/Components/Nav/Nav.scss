@@ -1,0 +1,147 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.nav {
+  // position: relative;
+  &__mobile-nav {
+    @include flex(100%, row, center, space-between);
+    border-bottom: 0.5px solid darken($neonPurple, 40%);
+
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__mobile-name {
+    color: lighten($neonPurple, 10%);
+
+    transition: transform ease 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__hamburger-icon,
+  &__close-icon {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  &__hamburger-icon {
+    animation: rotateHamburgerToClose 0.3s ease forwards;
+  }
+
+  &__close-icon {
+    animation: rotateCloseToHamburger 0.3s ease forwards;
+  }
+
+  // menu
+  &__menu {
+    animation: fadeCard 0.2s ease forwards;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+  &__listHolder {
+    list-style: none;
+  }
+
+  &__list {
+    padding: 0.5rem 1rem;
+    border-bottom: 0.5px solid darken($neonPurple, 40%);
+    color: lighten($neonPurple, 10%);
+
+    &-active {
+      color: white;
+      background-color: darken($electricBlue, 34%);
+    }
+  }
+
+  // desktop nav
+  &__desktop-nav {
+    display: none;
+
+    @include tablet {
+      display: inline;
+      @include flex(unset, row, center, start);
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+    }
+    @include desktop {
+      display: inline;
+      @include flex(unset, row, center, start);
+      border-bottom: 0.5px solid darken($neonPurple, 40%);
+    }
+  }
+
+  &__item {
+    border-left: 0.5px solid darken($neonPurple, 40%);
+    width: 6rem;
+    height: 2.5rem;
+  }
+
+  &__emptyItem {
+    border-left: 0.5px solid darken($neonPurple, 40%);
+    padding: 0.5rem;
+    flex: 1;
+    height: 2.5rem;
+  }
+
+  &__desktop-name,
+  &__item {
+    color: lighten($neonPurple, 10%);
+    font-size: 13px;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  &__desktop-name {
+    padding: 0 8rem 0 1.5rem;
+
+    transition: transform ease 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__item {
+    @include flex(unset, row, center, center);
+    position: relative;
+    padding: 0 1.5rem;
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $green;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      width: 0;
+
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
+    &-active {
+      color: white;
+      background-color: darken($electricBlue, 34%);
+
+      &::after {
+        width: 100%;
+        transform: scaleX(1);
+      }
+    }
+    &:hover {
+      background-color: darken($electricBlue, 34%);
+      color: white;
+    }
+  }
+}
