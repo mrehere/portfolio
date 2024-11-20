@@ -44,13 +44,13 @@
     font-weight: 500;
     font-size: 1rem;
     color: lighten($neonPurple, 10%);
-    margin-bottom: 1rem;
+    margin: 1rem 1rem;
 
     @include tablet {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
     @include desktop {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   }
   &__link-container {

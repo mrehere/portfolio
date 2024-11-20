@@ -17,7 +17,6 @@ function Gist() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const [detailsStatus, setDetailsStatus] = useState(false);
   const [detailsIndex, setDetailsIndex] = useState(null);
 
   const handleDetails = (index) => {
@@ -39,6 +38,7 @@ function Gist() {
             return Object.values(gist.files).map((file) => file.raw_url);
           })
           .flat();
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching Gists:", error);
       }
@@ -79,7 +79,10 @@ function Gist() {
 
     getSnippets();
   }, [data]);
-
+  if (loading) {
+    console.log("loading..");
+    return <h1>Snippets loading.....</h1>;
+  }
   return (
     <section className="gist">
       {snippet.map((item, index) => (
