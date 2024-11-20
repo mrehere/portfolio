@@ -98,9 +98,13 @@
   &__desktop-name,
   &__item {
     color: lighten($neonPurple, 10%);
-    font-size: 13px;
+    font-size: 0.8125rem;
     padding: 0.5rem;
     cursor: pointer;
+
+    @include desktop {
+      font-size: 1rem;
+    }
   }
 
   &__desktop-name {

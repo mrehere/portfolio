@@ -41,6 +41,10 @@
   &__skill-container {
     animation: fadeCardFromTop 0.3s ease forwards;
     margin: 0 0 1rem 2rem;
+
+    @include tablet {
+      margin-left: 1rem;
+    }
   }
   &__language-header {
     color: lighten($electricBlue, 30%);
@@ -65,8 +69,8 @@
     margin: 0.5rem 0.25rem;
 
     @include tablet {
-      width: 5rem;
-      height: 4.5rem;
+      // width: 5rem;
+      // height: 4.5rem;
       margin: 1rem 0.5rem;
     }
 
@@ -83,7 +87,7 @@
   }
   &__education {
     @include flex(unset, row, center, start);
-    margin: 1rem 1rem 1rem 2rem;
+    margin: 1rem 1rem 1rem 1rem;
   }
 
   &__education-img {
@@ -96,6 +100,10 @@
   &__education-degree {
     font-size: 1rem;
     margin-bottom: 0.75rem;
+
+    @include tablet {
+      font-size: 0.8125rem;
+    }
   }
 
   &__education-degree {
@@ -108,6 +116,9 @@
   &__education-location,
   &__education-grade {
     margin-bottom: 0.75rem;
+    @include tablet {
+      font-size: 0.8125rem;
+    }
   }
 
   &__education-grade {
