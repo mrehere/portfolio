@@ -7,8 +7,8 @@ import { formatDistanceToNow } from "date-fns";
 import details from "../../assets/icons/details.svg";
 import close from "../../assets/icons/close.svg";
 function Gist() {
-  const token =
-    "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";
+  const token = import.meta.env.VITE_MY_TOKEN;
+
   const apiUrl = "https://api.github.com/gists";
 
   const [code, setCode] = useState("");
