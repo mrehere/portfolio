@@ -16,6 +16,13 @@
 
   &__block-1 {
     padding: 6rem 1rem 2rem 2rem;
+
+    @include tablet {
+      width: 50vw;
+    }
+    @include desktop {
+      width: 50vw;
+    }
   }
 
   &__gradient1 {
