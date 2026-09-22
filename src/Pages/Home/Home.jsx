@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./Home.scss";
 
 function Home() {
-  const sentence = `> ${" "}Full-stack developer`;
+  const sentence = `> ${" "}Insurance Technologist`;
   const [text, setText] = useState("");
   const typingSpeed = 100;
 
@@ -26,7 +26,7 @@ function Home() {
         <div className="home__head">
           <p className="home__hello">Hello, I am</p>
           <h1 className="home__name">
-            Md Majedur{" "}
+            Majedur{" "}
             <span className="home__name home__name-last">Rahman</span>
           </h1>
           <div className="home__designation">
@@ -62,33 +62,34 @@ function Home() {
       </div>
 
       <div className="home__block-2">
-        <p className="home__bio-header"> _from-circuitBoard-to-code</p>
+        <p className="home__bio-header"> _engineering-software-and-beyond</p>
         <p className="home__bio">
-          My journey into tech began in an unexpected place—during my
-          undergraduate studies in <strong>Electrical Engineering</strong> ⚡️.
-          It was in a C programming course 💻 that I first realized the immense
-          potential of technology to make a positive impact on the world.
-          Although I later pursued a Master’s in Energy Systems 🌱, I spent much
-          of that time working in the <strong>service industry</strong> 🍽️,
-          gaining valuable skills in customer service, communication, and
-          enhanced my problem-solving—skills that helped shape my approach to
-          tech. It was a period of balancing both worlds, and I kept my passion
-          for technology alive, waiting for the right moment to transition into
-          the field I truly loved.
-          <br />
-          <br />
-          That moment came when I joined{" "}
-          <strong>BrainStation’s Software Engineering bootcamp</strong> 🚀,
-          diving headfirst into full-stack development. With hands-on experience
-          in React, Express, and MySQL, I worked on both individual and
-          collaborative projects, embracing industry best practices. This
-          journey has been incredibly rewarding, and I’m excited to keep growing
-          in this dynamic field. 🎉
-          <br />
-          <br />
-          Want to see what I’ve been working on? Check out my portfolio website!
-          🌟 And if you're as passionate about tech as I am, let’s connect—I’d
-          love to chat! 😄
+           My interest in technology began during my undergraduate studies in{" "}
+  <strong>Electrical & Electronic Engineering</strong> ⚡️, where I was
+  introduced to programming through C and developed an interest in using
+  technology to solve practical problems.
+  <br />
+  <br />
+  I later pursued a <strong>Master's in Energy Systems Engineering</strong> 🌱,
+  where I developed a systems-oriented approach to analyzing complex problems
+  and understanding how different components interact.
+  <br />
+  <br />
+  My interest in software continued alongside my academic and professional
+  experiences, eventually leading me to complete{" "}
+  <strong>BrainStation's Software Engineering program</strong> 💻. There, I
+  gained hands-on experience building full-stack applications using JavaScript,
+  React, Node.js, Express.js, and MySQL.
+  <br />
+  <br />
+  Today, I work in <strong>Group Benefits operations at belairdirect</strong>,
+  where I apply analytical problem-solving, systems knowledge, and operational
+  experience to support members, processes, and internal teams.
+  <br />
+  <br />
+  I'm particularly interested in the intersection of{" "}
+  <strong>technology, systems, process improvement, and practical
+  problem-solving</strong>.
         </p>
       </div>
     </main>
